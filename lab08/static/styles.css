@@ -1,0 +1,57 @@
+body {
+    font-family: "Lucida Console",monospace;
+    color: mediumslateblue;
+    background-color: #ddd9fc
+}
+
+h1 {
+    color: darkslateblue;
+    font-family: fantasy
+}
+h2 {
+    color: mediumslateblue;
+    font-family: monospace
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid darkslateblue;
+    border-radius: 5px
+}
+
+form {
+    margin-bottom: 20px
+}
+
+input[type="date"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid mediumslateblue;
+    background-color: #c4bdff;
+    color: mediumslateblue
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #a597fc;
+    color: darkblue;
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+button:hover {
+    background-color: mediumslateblue;
+    border: 3px solid darkblue
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007BFF
+}
+
+a:hover {
+    text-decoration: underline
+}

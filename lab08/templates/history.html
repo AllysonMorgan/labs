@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APOD History</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>APOD History</h1>
+    <form method="POST">
+        <label for="date">Enter a date:</label>
+        <input type="date" id="date" name="date" required>
+        <button type="submit">Get APOD</button>
+        
+    </form>
+
+    {% if apod %}
+        <h2>{{ apod.title }}</h2>
+        <img src="{{ apod.url }}" alt="{{ apod.title }}">
+        <p>{{ apod.explanation }}</p>
+        <p><strong>Date:</strong> {{ apod.date }}</p>
+        <p><strong>Copyright:</strong> {{ apod.copyright if apod.copyright else 'No copyright information' }}</p>
+        <a href="{{ url_for('home') }}">Go back to Home Page</a>
+    {% elif error %}
+        <div style="color: red;">{{ error }}</div>
+        <a href="{{ url_for('home') }}">Go back to Home Page</a>
+    {% else %}
+        <a href="{{ url_for('home') }}">Go back to Home Page</a>
+    {% endif %}
+</body>
+</html>
